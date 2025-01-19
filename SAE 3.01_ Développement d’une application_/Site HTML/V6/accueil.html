@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Sorbonne Paris Nord</title>
+    <link rel="stylesheet" href="accueil_styles.css">
+</head>
+<body>
+    <header>
+        <!-- Redirection vers la page d'accueil -->
+        <a href="accueil.html"><img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord"></a>
+
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="documentation.html">Documentation</a>
+            <a href="collection.html">Collection</a>
+            <a href="reservation_View.php">Réservation</a>
+            <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+        </nav>
+
+        <!-- Barre de recherche de jeux -->
+        <div class="search-bar">
+          <form action="index.php" method="get">
+            <input type="hidden" name="action" value="searchGame">
+            <input type="text" name="query" placeholder="Rechercher un jeu..." required>
+            <button type="submit">🔍</button>
+          </form>
+        </div>
+
+    <!-- Menu déroulant pour gérer l'utilisateur -->
+    <div class="profil-utilisateur" id="profilUtilisateur">
+        <img src="img/profile.png" alt="Icône Profil" class="icone-utilisateur" onclick="basculerMenuDeroulant()">
+
+        <div class="menu-deroulant" id="menuDeroulant">
+            <a href="compte.html">Gestion du profil</a>
+            <button class="bouton-deconnexion">Déconnexion</button>
+        </div>
+    </div>
+    </header>
+
+      <!-- Section principale qui contient un slider (carousel) de jeux populaires et un slider d'actus -->
+      <div class="sliders-wrapper">
+        <!-- Slider jeux populaires -->
+        <div class="slider-background">
+              <h1 class="slider-title">Jeux populaires</h1>
+              <div class="slider-container">
+                  <div class="slider">
+                    <!-- Chaque slide présente un jeu avec une image et un lien -->
+                      <div class="slide">
+                        <img src="img\uno.jpg" alt="Uno">
+                        <div class="note"><a href="">Uno - Mattel</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\TimesUp.png" alt="Time's Up">
+                        <div class="note"><a href="">Time's Up - Repos Productions</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\p4.jpeg" alt="Puissance 4">
+                        <div class="note"><a href="">Puissance 4 - Hasbro</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\monopoly.jpg" alt="Monopoly">
+                        <div class="note"><a href="">Monopoly - Hasbro</a></div>
+                      </div>
+                  </div>
+                  <!-- Boutons pour naviguer entre les slides -->
+                  <button class="prev">&#10094;</button>
+                  <button class="next">&#10095;</button>
+              </div>
+
+          </div>
+
+
+          <!-- Slider d'actualités -->
+          <div class="slider-background">
+                <h1 class="slider-title">Actualités</h1>
+                <div class="slider-container">
+                    <div class="slider">
+                        <!-- Chaque slide présente une actualité sous forme de texte -->
+                        <div class="slide2">
+                          <div class="actu"><a>🃏 Grand Tournoi de Poker Universitaire ♠️♥️<br><br>
+
+                            📅 <strong>Quand ?</strong> Le 31 février 2024 (notez bien la date !)<br>
+                            📍 <strong>Où ?</strong> À l’université (lieu précis à confirmer)<br><br>
+
+                            🎯 Ce tournoi est l’occasion parfaite pour :<br>
+                            - Tester vos compétences 🧠<br>
+                            - Défier vos camarades 🤝<br>
+                            - Vous mesurer aux meilleurs joueurs du campus 🏆<br><br>
+
+                            💡 Que vous soyez un joueur expérimenté ou un débutant curieux, ce tournoi est ouvert à tous les niveaux.
+                            Les inscriptions débuteront le 27 janvier, alors ne manquez pas l’ouverture des places !<br><br>
+
+                            🎁 De nombreux prix attractifs sont à la clé, alors préparez-vous à donner le meilleur de vous-même tout au long de la compétition.
+                            </a></div>
+                        </div>
+
+                        <div class="slide2">
+                          <div class="actu"><a>Atelier Jeux de Société : Fabrique ton Propre Jeu !
+
+                            Avez-vous déjà rêvé de créer votre propre jeu de société ? Le club des jeux de société vous propose un atelier ludique et créatif pour concevoir un jeu unique à partir de vos idées !
+
+                            <br><br>📅 <strong>Quand ?</strong> Mercredi prochain, de 17h à 19h
+                            <br><br>📍 <strong>Où ?</strong> Salle créative, bâtiment C
+                            <br><br>🎨 Au programme :
+                            Initiation au design de jeux : du concept aux règles.
+                            Création de matériel simple (cartes, pions, plateau).
+                            Test et amélioration des jeux créés par les participants.
+                            <br><br>Tout le matériel est fourni et aucune expérience n’est nécessaire ! Venez avec votre imagination et repartez avec un jeu conçu par vos soins.
+
+                            📩 Inscription gratuite : <a href="mailto:club.jeux@univ-spn.fr">club.jeux@univ-spn.fr</a></div>
+                        </div>
+
+                        <div class="slide2">
+                          <div class="actu"><a>Soirée Découverte : Jeux de Société Méconnus<br><br>
+
+                            Envie de sortir des sentiers battus ? Le club des jeux de société organise une soirée spéciale pour explorer des jeux originaux et méconnus, loin des classiques habituels.<br><br>
+
+                            📅 <strong>Quand ?</strong> Vendredi prochain, de 18h à 21h<br>
+                            📍 <strong>Où ?</strong> Espace détente, bâtiment B<br><br>
+
+                            🎲 Au programme :<br>
+                            - Découverte de jeux de stratégie, coopération et narration venus des quatre coins du monde.<br>
+                            - Explication des règles et parties guidées pour une prise en main rapide.<br>
+                            - Discussions autour des mécaniques innovantes et des thèmes atypiques.<br><br>
+
+                            Pas besoin d’être un expert, la soirée est ouverte à tous, débutants comme passionnés !<br><br>
+
+                            📩 Entrée libre mais inscription recommandée : <a href="mailto:communication@sorbonne-paris-nord.fr">club.jeux@univ-spn.fr</a><br><br>
+
+                            </a></div>
+                        </div>
+                    </div>
+                    <!-- Boutons pour naviguer entre les slides -->
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="wrap">
+        <div class="article">
+            <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Tournoi">Tournoi</span>
+                </div>
+                    <h1>
+                        <span class="cat-title"><a href="https://etd.univ-spn.fr/2025/01/10/service-culturel-nouveau-programme-ateliers-evenements-places-offertes/">Tournoi de Poker le 31 février - Venez nombreux !</a></span>
+                    </h1>
+        </div>
+        <div class="article">
+            <div class="overlay"></div>
+            <div class="wrap-cat">
+                <span class="cat" data-hover="Clubs">Clubs</span>
+            </div>
+            <h1>
+                <span class="cat-title"><a href="https://etd.univ-spn.fr/2025/01/10/service-culturel-nouveau-programme-ateliers-evenements-places-offertes/">Les inscriptions pour le club d'échec sont ouvertes !</a></span>
+            </h1>
+        </div>
+        <div class="article">
+                <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Evenements">Evenements</span>
+                </div>
+                <h1>
+                    <span class="cat-title"><a href="https://etd.univ-spn.fr/2025/01/10/service-culturel-nouveau-programme-ateliers-evenements-places-offertes/">Soirée Jeux de Société à l'Université – Rejoignez-nous !</a></span>
+                </h1>
+            </div>
+            <div class="article">
+                <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Infos">Infos</span>
+                </div>
+                <h1>
+                    <a href="https://etd.univ-spn.fr/2025/01/10/service-culturel-nouveau-programme-ateliers-evenements-places-offertes/">Service culturel : nouveau programme, ateliers, événements, places offertes…</a>
+                </h1>
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <script>
+      // On sélectionne les conteneurs de carousel
+      document.querySelectorAll('.slider-container').forEach((sliderContainer, index) => {
+
+          // Conteneur des slides
+          const slider = sliderContainer.querySelector('.slider');
+          // Slides elles-même
+          const slides = slider.querySelectorAll('.slide, .slide2');
+          // Boutons de navigation
+          const prevBtn = sliderContainer.querySelector('.prev');
+          const nextBtn = sliderContainer.querySelector('.next');
+
+          // Indice pour la slide actuelle
+          let currentIndex = 0;
+
+          // Affiche une slide en changeant la position de l'index
+          function showSlides(index) {
+              if (index >= slides.length) { // Si l'index dépasse le nombre max de slides
+                  currentIndex = 0; // Retour a la première slide
+              } else if (index < 0) { // Si l'index est plus petit que 0
+                  currentIndex = slides.length - 1; // Va à la dernière slide
+              } else {
+                  currentIndex = index; // Définit l'index actuel
+              }
+              // Déplace le slider horizontalement
+              slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }
+
+          // Slide d'après
+          function nextSlide() {
+              showSlides(currentIndex + 1);
+          }
+
+          // Slide d'avant
+          function prevSlide() {
+              showSlides(currentIndex - 1);
+          }
+
+          // EventListenet pour le bouton suivant
+          nextBtn.addEventListener('click', nextSlide);
+          // EventListener pour le bouton précédent
+          prevBtn.addEventListener('click', prevSlide);
+
+          showSlides(currentIndex);
+      });
+
+      //Menu utilisateur déroulant
+
+      // Fonction pour l'ouverture du menu
+      function basculerMenuDeroulant() {
+          const menuDeroulant = document.getElementById('menuDeroulant');
+          // Si le menu est visible on le cache sinon on l'affiche
+          menuDeroulant.style.display = menuDeroulant.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Ferme le menu déroulant si on clique ailleurs
+      window.onclick = function(event) {
+          // Vérifie si l'utilisateur n'a pas cliqué sur l'icône de profil
+          if (!event.target.matches('.icone-utilisateur')) {
+              const menusDeroulants = document.getElementsByClassName('menu-deroulant');
+              // Parcourt tous les menus déroulants pour les fermer
+              for (let i = 0; i < menusDeroulants.length; i++) {
+                  const menuOuvert = menusDeroulants[i];
+                  if (menuOuvert.style.display === 'block') {
+                      menuOuvert.style.display = 'none';
+                  }
+              }
+          }
+      }
+    </script>
+
+    <footer class="footer">
+        <p>
+            <a>© 2025 Sorbonne Paris Nord | Tous droits réservés.</a>
+            <a href="mentions.html">Mentions légales</a> |
+            <a href="politique.html">Politique de cookies</a> |
+            <a href="protection.html">Protection de données</a>
+        </p>
+    </footer>
+</body>
+</html>

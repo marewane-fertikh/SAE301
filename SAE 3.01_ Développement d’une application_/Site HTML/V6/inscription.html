@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Rends le site responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Page d'inscription</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+    <div class="connect">
+        <img src="img/LogoUSPN.png" alt="Logo Université Sorbonne Paris Nord" class="logo">
+        <h1>Inscription</h1>
+        <form action="inscription.php" method="POST">
+            <!--   Formulaire d'inscription obligatoire -->
+            <input text="name" name="nom" placeholder="Nom..." required>
+            <input text="fname" name="prenom" placeholder="Prénom..." required>
+            <input type="text" name="id" placeholder="Numéro étudiant..." required>
+            <input type="password" name="mdp" placeholder="Mot de passe..." required>
+            <input type="confirmpass" name="mdpfinal" placeholder="Confirmez le mot de passe..." required>
+            <button type="submit">Connexion</button>
+        </form>
+        <a href="connexion.html">Connexion</a>
+        <a href="inscription.html">Inscrivez-vous</a>
+    </div>
+</body>
+</html>

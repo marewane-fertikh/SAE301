@@ -1,0 +1,204 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #293358;
+    padding: 10px 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header img {
+    height: 40px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Barre de recherche dans le header */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    border-radius: 25px; 
+    padding: 1px 30px; 
+}
+
+header .search-bar input {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 16px; 
+    border-radius: 20px;
+}
+
+header .search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px; 
+    cursor: pointer;
+    margin-left: 15px; 
+}
+
+
+/* Style pour la section du profil utilisateur */
+.profil-utilisateur {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Style pour l'image de l'icône utilisateur */
+.icone-utilisateur {
+    cursor: pointer;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px;
+    border-radius: 50%; /* Pour un rendu circulaire */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cadre */
+    border: 2px solid #ccc; /* Optionnel : ajoute une bordure */
+}
+
+/* Style pour le menu déroulant */
+.menu-deroulant {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style des liens dans le menu déroulant */
+.menu-deroulant a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Effet hover sur les liens du menu */
+.menu-deroulant a:hover {
+    background-color: #f1f1f1;
+}
+.bouton-deconnexion {
+    background-color: #ff4d4d; /* Couleur rouge pour indiquer la déconnexion */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Prend toute la largeur pour un rendu homogène */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px; /* Coins légèrement arrondis */
+    margin-top: 8px; /* Espace entre les liens et le bouton */
+    transition: background-color 0.3s ease; /* Animation pour l'effet hover */
+}
+
+.bouton-deconnexion:hover {
+    background-color: #d93636; /* Couleur plus sombre au survol */
+}
+
+
+/* Contenu principal */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Barre de recherche centrale */
+.container .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: #444;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.container .search-bar input {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 20px 0 0 20px;
+}
+
+.container .search-bar button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container .search-bar button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #293358;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 5px 0;
+}

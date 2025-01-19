@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Université Sorbonne Paris Nord</title>
+    <link rel="stylesheet" href="collection.css">
+</head>
+<body>
+    <header>
+        <a href="accueil.html"><img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord"></a>
+        <nav>
+            <a href="documentation.html">Documentation</a>
+            <a href="info.php">Collection</a>
+            <a href="reservation_View.php">Réservation</a>
+            <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+        </nav>
+        <div class="search-bar">
+                <form action="index.php" method="get">
+                <input type="hidden" name="action" value="searchGame">
+                <input type="text" name="query" placeholder="Rechercher un jeu..." required>
+                <button type="submit">🔍</button>
+        </div>
+        <div class="profil-utilisateur" id="profilUtilisateur">
+            <img src="img/profile.png" alt="Icône Profil" class="icone-utilisateur" onclick="basculerMenuDeroulant()">
+
+            <div class="menu-deroulant" id="menuDeroulant">
+                <a href="compte.html">Gestion du profil</a>
+                <button class="bouton-deconnexion">Déconnexion</button>
+            </div>
+        </div>
+        
+        
+        
+    </header>
+    <div class="container">
+        <h1>Collection</h1>
+        <div class="search-bar es">
+            <input type="text" placeholder="Rechercher votre jeu...">
+            <button type="submit">Recherche</button>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour basculer l'affichage du menu déroulant
+        function basculerMenuDeroulant() {
+            const menuDeroulant = document.getElementById('menuDeroulant');
+            // Si le menu est affiché, le cacher, sinon l'afficher
+            menuDeroulant.style.display = menuDeroulant.style.display === 'block' ? 'none' : 'block';
+        }
+    
+        // Fermer le menu déroulant si l'utilisateur clique en dehors
+        window.onclick = function(event) {
+            // Vérifie si l'élément cliqué n'est pas l'icône de l'utilisateur
+            if (!event.target.matches('.icone-utilisateur')) {
+                const menusDeroulants = document.getElementsByClassName('menu-deroulant');
+                // Parcourt tous les menus déroulants pour les cacher
+                for (let i = 0; i < menusDeroulants.length; i++) {
+                    const menuOuvert = menusDeroulants[i];
+                    if (menuOuvert.style.display === 'block') {
+                        menuOuvert.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+    
+
+    <footer class="footer">
+        <p>
+            <a href="mentions.html">Mentions légales</a> |
+            <a href="politique.html">Politique de cookies</a> |
+            <a href="protection.html">Protection de données</a>
+        </p>
+    </footer>
+</body>
+</html>

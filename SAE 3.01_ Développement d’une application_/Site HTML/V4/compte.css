@@ -1,0 +1,250 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #293358;
+    padding: 10px 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header img {
+    height: 40px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Barre de recherche dans le header */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    border-radius: 25px;
+    padding: 1px 30px;
+}
+
+header .search-bar input {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+header .search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Style pour la section du profil utilisateur */
+.profil-utilisateur {
+    position: relative;
+    display: inline-block;
+}
+
+.icone-utilisateur {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.menu-deroulant {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-deroulant a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.bouton-deconnexion {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-deconnexion:hover {
+    background-color: #d93636;
+}
+
+/* Contenu principal */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulaire de gestion de compte */
+.form-gestion-compte {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2f3c62;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-gestion-compte label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color:white;
+}
+
+.form-gestion-compte input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    display: block;
+}
+
+.form-gestion-compte input:focus {
+    border-color: #007bff;
+}
+
+.form-gestion-compte .btn-submit {
+    background-color: #293358;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-gestion-compte .btn-submit:hover {
+    background-color: #1e284c;
+}
+
+/* Section Profil */
+.profil-section {
+    background-color: #2f3c62;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin:0 auto;
+}
+
+
+
+.photo-profil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo-profil img.photo-actuelle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.photo-profil label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.photo-profil input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.photo-profil .btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.photo-profil .btn-submit:hover {
+    background-color: #45a049;
+}
+
+#photoPreview {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    object-fit: cover;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Sorbonne Paris Nord</title>
+    <link rel="stylesheet" href="accueil_styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord">
+        <nav>
+            <a href="#">Documentation</a>
+            <a href="">Collection</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Recherche...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-icon">👤</div>
+    </header>
+
+    <main class="main">
+        <section class="categories">
+            <h3>Catégories de jeux :</h3>
+            <ul>
+                <li><a href="#">Jeux de dés</a></li>
+                <li><a href="#">Jeux d'adresse</a></li>
+                <li><a href="#">Jeux d'ambiance</a></li>
+                <li><a href="#">Jeux de cartes</a></li>
+                <li><a href="#">Jeux de plateau</a></li>
+                <li><a href="#">Jeux de mémoire</a></li>
+                <li><a href="#">Jeux de connaissance</a></li>
+                <li><a href="#">Jeux de lettres</a></li>
+                <li><a href="#">Jeux de logique</a></li>
+                <li><a href="#">Jeux de pion</a></li>
+                <li><a href="#">Jeux éducatifs</a></li>
+                <li><a href="#">Jeux d'enquête</a></li>
+                <li><a href="#">Jeux de coopération</a></li>
+                <li><a href="#">Jeux de stratégie</a></li>
+                <li><a href="#">Jeux de gestion</a></li>
+                <li><a href="#">Jeux de hasard</a></li>
+                <li><a href="#">Jeux de rôle</a></li>
+                <li><a href="#">Jeux créatifs</a></li>
+            </ul>
+        </section>
+
+        <section class="content">
+            <h2>Les jeux les plus populaires :</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn left-btn">&lt;</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="carousel-item"><img src="img/TimeUp.webp" alt="Time's Up"></div>
+                        <div class="carousel-item"><img src="img/p4.webp" alt="Puissance 4"></div>
+                        <div class="carousel-item"><img src="img/monopoly.jpg" alt="Monopoly"></div>
+                        <div class="carousel-item"><img src="img/uno.jpg" alt="Uno"></div>
+                    </div>
+                </div>
+                <button class="carousel-btn right-btn">&gt;</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const leftBtn = document.querySelector('.left-btn');
+        const rightBtn = document.querySelector('.right-btn');
+        const wrapper = document.querySelector('.carousel-wrapper');
+
+        let scrollPosition = 0;
+        const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+        const visibleItems = 2;
+
+        rightBtn.addEventListener('click', () => {
+            if (scrollPosition < (carousel.children.length - visibleItems) * itemWidth) {
+                scrollPosition += itemWidth;
+                carousel.style.transform = `translateX(-${scrollPosition}px)`;
+            }
+        });
+
+        leftBtn.addEventListener('click', () => {
+            if (scrollPosition > 0) {
+                scrollPosition -= itemWidth;
+                carousel.style.transform = `translateX(-${scrollPosition}px)`;
+            }
+        });
+
+        wrapper.style.overflow = 'hidden';
+    </script>
+
+    <footer class="footer">
+        <p>
+            <a href="mentions.html">Mentions légales</a> |
+            <a href="politique.html">Politique de cookies</a> |
+            <a href="protection.html">Protection de données</a>
+        </p>
+    </footer>
+</body>
+</html>

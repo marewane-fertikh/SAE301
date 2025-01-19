@@ -1,0 +1,152 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url(img/fond_jeu.jpg) no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(85, 85, 85, 0.4); /* Opacité à 60% */
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    background-color: #A8917E;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header img {
+    max-height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100dvh - 60px); /* Ajuste la hauteur en prenant en compte le header */
+    margin-top: 60px; /* Compense la hauteur du header */
+}
+
+.reservation-form {
+    background-color: #2f3c62;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.reservation-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.reservation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.reservation-form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: #A8917E;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #A8917E;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 5px 0;
+}

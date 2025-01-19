@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    display: flex;
+    background-color: #A8917E;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header img {
+    max-height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+    text-align: center;
+    padding: 100px 30px;
+}
+
+
+
+.documentation{
+    display: block;
+    background-color: #bbbbbb;
+    border-radius: 1%;
+    box-shadow:10px 5px 5px  rgba(0, 0, 0, 0.5);
+    padding-bottom: auto;
+    padding-top: 2px;
+
+}
+
+
+.documentation h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+
+}
+
+.documentation p {
+    text-align: justify;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.documentation .rule-card {
+    background-color: #1A2945;
+    color: white;
+    margin: 30px ;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 200px;
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+}
+
+.documentation .rule-card img{
+    width: 200px;
+    height: 150px;
+    max-width: 200px;
+    max-height:200px ;
+}
+
+.documentation .rule-card:hover {
+    background-color: #0f1624;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    margin-top: 30px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #A8917E;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 5px 0;
+}

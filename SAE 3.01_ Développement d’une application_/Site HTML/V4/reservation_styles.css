@@ -1,0 +1,216 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url("img/fond_jeu.jpg") no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    position: relative;
+}
+
+
+header {
+    position: fixed;
+    display: flex;
+    background-color: #293358;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header img {
+    max-height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+/* Barre de recherche dans le header */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    border-radius: 25px; 
+    padding: 1px 30px; 
+}
+
+header .search-bar input {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 16px; 
+    border-radius: 20px;
+}
+
+header .search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px; 
+    cursor: pointer;
+    margin-left: 15px; 
+}
+
+/* Style pour la section du profil utilisateur */
+.profil-utilisateur {
+    position: flex;
+    margin-right: 200px;
+    display: inline-block;
+}
+
+
+/* Style pour l'image de l'icône utilisateur */
+.icone-utilisateur {
+    cursor: pointer;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px;
+    border-radius: 50%; /* Pour un rendu circulaire */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cadre */
+    border: 2px solid #ccc; /* Optionnel : ajoute une bordure */
+}
+
+/* Style pour le menu déroulant */
+.menu-deroulant {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    margin-right: 100px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style des liens dans le menu déroulant */
+.menu-deroulant a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Effet hover sur les liens du menu */
+.menu-deroulant a:hover {
+    background-color: #f1f1f1;
+}
+.bouton-deconnexion {
+    background-color: #ff4d4d; /* Couleur rouge pour indiquer la déconnexion */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Prend toute la largeur pour un rendu homogène */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px; /* Coins légèrement arrondis */
+    margin-top: 8px; /* Espace entre les liens et le bouton */
+    transition: background-color 0.3s ease; /* Animation pour l'effet hover */
+}
+
+.bouton-deconnexion:hover {
+    background-color: #d93636; /* Couleur plus sombre au survol */
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100dvh - 60px); /* Ajuste la hauteur en prenant en compte le header */
+    margin-top: 60px; /* Compense la hauteur du header */
+}
+
+.reservation-form {
+    background-color: #2f3c62;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reservation-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.reservation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.reservation-form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: #A8917E;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #293358;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 5px 0;
+}

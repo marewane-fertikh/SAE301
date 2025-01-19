@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Sorbonne Paris Nord</title>
+    <link rel="stylesheet" href="accueil_styles.css">
+</head>
+<body>
+    <header>
+        <a href="accueil.html"><img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord"></a>
+        <nav>
+            <a href="#">Documentation</a>
+            <a href="collection.php">Collection</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+        </nav>
+        <div class="search-bar">
+			<form action="index.php" method="get">
+				<input type="hidden" name="action" value="searchGame">
+				<input type="text" name="query" placeholder="Rechercher un jeu..." required>
+				<button type="submit">🔍</button>
+			</form>
+		</div> 
+        <a href="connexion.html"><div class="user-icon">👤</div></a>
+    </header>
+      <div class="sliders-wrapper">
+
+
+        <div class="slider-background">
+              <h1 class="slider-title">Jeux populaires</h1>
+              <div class="slider-container">
+                  <div class="slider">
+
+                      <div class="slide">
+                        <img src="img\uno.jpg" alt="Uno">
+                        <div class="note"><a href="">Uno - Mattel</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\TimesUp.png" alt="Time's Up">
+                        <div class="note"><a href="">Time's Up - Repos Productions</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\p4.jpeg" alt="Puissance 4">
+                        <div class="note"><a href="">Puissance 4 - Hasbro</a></div>
+                      </div>
+
+                      <div class="slide">
+                        <img src="img\monopoly.jpg" alt="Monopoly">
+                        <div class="note"><a href="">Monopoly - Hasbro</a></div>
+                      </div>
+                  </div>
+                  <button class="prev">&#10094;</button>
+                  <button class="next">&#10095;</button>
+              </div>
+
+          </div>
+
+
+
+          <div class="slider-background">
+                <h1 class="slider-title">Actualités</h1>
+                <div class="slider-container">
+                    <div class="slider">
+
+                        <div class="slide2">
+                          <div class="actu"><a>Un grand tournoi de poker universitaire se déroulera le 31 février 2024, une occasion à ne pas manquer pour tous les passionnés de ce jeu captivant ! Que vous soyez un joueur expérimenté ou un débutant curieux, ce tournoi est ouvert à tous les niveaux. Vous pourrez tester vos compétences, défier vos camarades et vous mesurer aux meilleurs joueurs du campus. Les inscriptions débuteront le 27 janvier, alors préparez-vous à réserver votre place dès l'ouverture. De nombreux prix attractifs seront à la clé, offrant ainsi une motivation supplémentaire pour donner le meilleur de vous-même tout au long de la compétition. <br><br>Venez nombreux et soyez prêts à vivre une expérience inoubliable !</a></div>
+                        </div>
+
+                        <div class="slide2">
+                          <div class="actu"><a>Un nouveau Club de Jeux de Société voit le jour à l'université ! Venez passer un moment convivial autour de vos jeux préférés, du Monopoly au Catan, tous les mardis et vendredis à 16h en salle A202.
+
+                                              Rejoignez-nous pour des parties entre étudiants, des tournois mensuels et des soirées thématiques. Ouvert à tous les membres de l'université, l'entrée est gratuite !
+
+                                              <br><br>Rendez-vous à la salle A202 pour des moments de détente et de stratégie.
+
+                                              </a></div>
+                        </div>
+
+                        <div class="slide2">
+                          <div class="actu"><a>Uno - Mattel</a></div>
+                        </div>
+
+                        <div class="slide2">
+                          <div class="actu"><a>Uno - Mattel</a></div>
+                        </div>
+
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="wrap">
+        <div class="article">
+            <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Tournoi">Tournoi</span>
+                </div>
+                    <h1>
+                        <span>Tournoi de Poker le 31 février - Venez nombreux !</span>
+                    </h1>
+        </div>
+        <div class="article">
+            <div class="overlay"></div>
+            <div class="wrap-cat">
+                <span class="cat" data-hover="Clubs">CLubs</span>
+            </div>
+            <h1>
+                <span>Les inscriptions pour le club d'échec sont ouvertes !</span>
+            </h1>
+        </div>
+        <div class="article">
+                <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Evenements">Evenements</span>
+                </div>
+                <h1>
+                    <span>Soirée Jeux de Société à l'Université – Rejoignez-nous !</span>
+                </h1>
+            </div>
+            <div class="article">
+                <div class="overlay"></div>
+                <div class="wrap-cat">
+                    <span class="cat" data-hover="Infos">Infos</span>
+                </div>
+                <h1>
+                    <span>Service culturel : nouveau programme, ateliers, événements, places offertes…</span>
+                </h1>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <script>
+
+      document.querySelectorAll('.slider-container').forEach((sliderContainer, index) => {
+      const slider = sliderContainer.querySelector('.slider');
+      const slides = slider.querySelectorAll('.slide, .slide2');  // Sélectionner les deux classes
+      const prevBtn = sliderContainer.querySelector('.prev');
+      const nextBtn = sliderContainer.querySelector('.next');
+      const dots = sliderContainer.querySelectorAll('.dot');
+
+      let currentIndex = 0;
+
+      // Fonction pour mettre à jour les indicateurs de points
+      function updateDots() {
+          dots.forEach((dot, i) => {
+              if (i === currentIndex) {
+                  dot.classList.add('active');
+              } else {
+                  dot.classList.remove('active');
+              }
+          });
+      }
+
+      // Fonction pour afficher un slide spécifique
+      function showSlides(index) {
+          if (index >= slides.length) {
+              currentIndex = 0;
+          } else if (index < 0) {
+              currentIndex = slides.length - 1;
+          } else {
+              currentIndex = index;
+          }
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+          updateDots();
+      }
+
+      function nextSlide() {
+          showSlides(currentIndex + 1);
+      }
+
+      function prevSlide() {
+          showSlides(currentIndex - 1);
+      }
+
+      // Écouteurs d'événements pour les boutons de navigation
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      dots.forEach(dot => {
+          dot.addEventListener('click', () => {
+              showSlides(parseInt(dot.dataset.index));
+          });
+      });
+
+      showSlides(currentIndex);
+    });
+
+
+    </script>
+
+    <footer class="footer">
+        <p>
+            <a>© 2025 Sorbonne Paris Nord | Tous droits réservés.</a>
+            <a href="mentions.html">Mentions légales</a> |
+            <a href="politique.html">Politique de cookies</a> |
+            <a href="protection.html">Protection de données</a>
+        </p>
+    </footer>
+</body>
+</html>

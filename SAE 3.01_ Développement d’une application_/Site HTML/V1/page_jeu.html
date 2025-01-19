@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jeu_styles.css">
+    <title>Monopoly - Sorbonne Paris Nord</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord">
+        <nav>
+            <a href="#">Documentation</a>
+            <a href="#">Collection</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Recherche...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-icon">👤</div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="content">
+            <!-- Left section: Image -->
+            <div class="image-section">
+                <img src="img/monopoly.jpg" alt="Monopoly Box">
+                <button class="reserve-button" onclick="redirectToReservation('Monopoly')">Réserver</button>
+
+        <script>
+            function redirectToReservation(gameName) {
+                // encode le nom du jeu pour s'assurer qu'il est compatible avec l'URL (par exemple, s'il y a des espaces ou des caractères spéciaux).
+                window.location.href = `reservation.html?jeu=${encodeURIComponent(gameName)}`;
+            }
+        </script>
+            </div>
+        </section>
+
+            <!-- Right section: Information -->
+            <section class="content">
+            <div class="info-section">
+                <h2>Informations :</h2>
+                <p><strong>Titre :</strong> Monopoly</p>
+                <p><strong>Auteur :</strong> Charles Darrow</p>
+                <p><strong>Éditeur :</strong> Hasbro</p>
+                <p><strong>Année de publication :</strong> 1974</p>
+                <p><strong>Nombre de joueurs :</strong> 2 - 6 joueurs</p>
+                <p><strong>Type de jeu :</strong> Jeu de plateau</p>
+                <h3>But du jeu :</h3>
+                <p>
+                    Les joueurs achètent, vendent et complotent pour s'enrichir au jeu de plateau Monopoly classique !
+                    Les joueurs choisissent leur pion Monopoly préféré, le placent sur la case Départ, puis lancent les dés pour tout posséder.
+                    Il faut acheter, vendre et échanger des propriétés pour gagner.
+                    Les cartes Chance ou Caisse de communauté peuvent changer la donne. Elles peuvent rendre un joueur plus riche... ou l'envoyer en prison !
+                </p>
+            </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            <a href="mentions.html">Mentions légales</a> |
+            <a href="politique.html">Politique de cookies</a> |
+            <a href="protection.html">Protection de données</a>
+        </p>
+    </footer>
+</body>
+</html>

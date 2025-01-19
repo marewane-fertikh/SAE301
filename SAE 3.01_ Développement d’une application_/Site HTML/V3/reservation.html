@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <title>Réservation - Sorbonne Paris Nord</title>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <a href="accueil.html"><img src="img/LogoUSPN.png" alt="Sorbonne Paris Nord"></a>
+    <nav>
+        <a href="documentation.html">Documentation</a>
+        <a href="collection.html">Collection</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="https://cas.univ-paris13.fr/cas/login?service=https%3A%2F%2Fent.univ-paris13.fr">ENT</a>
+    </nav>
+    <div class="search-bar">
+			<form action="index.php" method="get">
+				<input type="hidden" name="action" value="searchGame">
+				<input type="text" name="query" placeholder="Rechercher un jeu..." required>
+				<button type="submit">🔍</button>
+			</form>
+	</div> 	
+    <div class="profil-utilisateur" id="profilUtilisateur">
+        <img src="img/profile.png" alt="Icône Profil" class="icone-utilisateur" onclick="basculerMenuDeroulant()">
+
+        <div class="menu-deroulant" id="menuDeroulant">
+            <a href="gestion_profil.html">Gestion du profil</a>
+            <button class="bouton-deconnexion">Déconnexion</button>
+        </div>
+    </div>
+</header>
+
+<!-- Main content -->
+<main>
+    <div class="reservation-form">
+        <h2>Réservation</h2>
+        <form action="#">
+            <!-- Numéro étudiant -->
+            <label for="student-number">Numéro étudiant</label>
+            <input type="text" id="student-number" placeholder="Numéro étudiant" required>
+
+            <!-- Sélection du jeu -->
+            <label for="game-select">Jeux de société...</label>
+            <select id="game-select" required>
+                <option value="" disabled selected>Choisissez un jeu...</option>
+                <option value="Monopoly">Monopoly</option>
+                <option value="Scrabble">Scrabble</option>
+                <option value="Risk">Risk</option>
+                <option value="Cluedo">Cluedo</option>
+                <option value="Uno">Uno</option>
+            </select>
+
+            <!-- Sélecteur de date -->
+            <label for="date-range">Début et fin d'emprunt</label>
+            <input type="text" id="date-range" placeholder="Sélectionner vos dates d'emprunt" required>
+
+            <!-- Bouton de soumission -->
+            <button type="submit">Réserver</button>
+        </form>
+    </div>
+</main>
+
+<script>
+    // Crée un objet qui permet de manipuler les paramètres de l'URL
+    const params = new URLSearchParams(window.location.search);
+    // Récupère la valeur du paramètre "jeu" depuis l'URL
+    const game = params.get('jeu');
+    if (game) {
+        const selectElement = document.getElementById('game-select');
+        // Définit la valeur sélectionnée de la liste déroulante avec le jeu récupéré
+        selectElement.value = game;
+    }
+</script>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <p>
+        <a href="mentions.html">Mentions légales</a> |
+        <a href="politique.html">Politique de cookies</a> |
+        <a href="protection.html">Protection de données</a>
+    </p>
+</footer>
+
+<!-- Flatpickr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+<script>
+    // Initialisation du calendrier avec localisation française et limite d'une semaine
+    flatpickr("#date-range", {
+        mode: "range", // Permet de sélectionner une plage de dates
+        dateFormat: "d/m/Y", // Format d'affichage des dates
+        locale: "fr", // Activation de la langue française
+        altInput: true, // Champ d'affichage alternatif
+        altFormat: "j F Y", // Format lisible (ex : 15 janvier 2025)
+        weekNumbers: true, // Affiche les numéros de semaine
+        minDate: "today", // Empêche la sélection des dates passées
+        onChange: function(Choixdate) {
+            // Vérifie si deux dates sont sélectionnées
+            if (Choixdate.length === 2) {
+                const Datedebut = Choixdate[0];
+                const Datefin = Choixdate[1];
+
+                // Calcul de la différence en jours
+                const diff = Math.abs(Datefin - Datedebut);
+                const JMax = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+                // Si la différence est supérieure à 7 jours, affiche un message d'erreur
+                if (JMax > 7) {
+                    alert("La durée maximale d'emprunt est d'une semaine !");
+                    this.clear(); // Réinitialise la sélection
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+        // Fonction pour basculer l'affichage du menu déroulant
+        function basculerMenuDeroulant() {
+            const menuDeroulant = document.getElementById('menuDeroulant');
+            // Si le menu est affiché, le cacher, sinon l'afficher
+            menuDeroulant.style.display = menuDeroulant.style.display === 'block' ? 'none' : 'block';
+        }
+    
+        // Fermer le menu déroulant si l'utilisateur clique en dehors
+        window.onclick = function(event) {
+            // Vérifie si l'élément cliqué n'est pas l'icône de l'utilisateur
+            if (!event.target.matches('.icone-utilisateur')) {
+                const menusDeroulants = document.getElementsByClassName('menu-deroulant');
+                // Parcourt tous les menus déroulants pour les cacher
+                for (let i = 0; i < menusDeroulants.length; i++) {
+                    const menuOuvert = menusDeroulants[i];
+                    if (menuOuvert.style.display === 'block') {
+                        menuOuvert.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
